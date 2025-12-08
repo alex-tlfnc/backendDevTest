@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: similarproducts
+server:
+  port: 5000
+external:
+  existing-apis:
+    base-url: http://localhost:3001
+    timeout-ms: 1000
+    similarIds-url: /product/{id}/similarids
+    productDetail-url: /product/{id}
+    max-connections: 30
+    max-retry: 2
+    delay-retry: 1
+similar-products:
+  product-timeout-ms: 800
+  global-timeout-ms: 2000
+  product-concurrency: 15
+logging:
+  level:
+    root: ERROR
